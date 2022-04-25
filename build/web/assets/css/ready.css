@@ -1,0 +1,73 @@
+
+
+
+@font-face {
+  font-family: LineAwesome;
+  src: url(../fonts/line-awesome.eot?v=1.1.);
+  src: url(../fonts/line-awesome.eot??v=1.1.#iefix) format("embedded-opentype"), url(../fonts/line-awesome.woff2?v=1.1.) format("woff2"), url(../fonts/line-awesome.woff?v=1.1.) format("woff"), url(../fonts/line-awesome.ttf?v=1.1.) format("truetype"), url(../fonts/line-awesome.svg?v=1.1.#fa) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+/*     CheckBox Input    */
+.select-all-checkbox + .form-check-sign:before {
+  background: #ccc !important;
+  border-color: #ccc !important;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + .form-check-sign, [type="checkbox"]:checked + .form-check-sign {
+  position: relative;
+  padding-left: 1.65em;
+  color: #777;
+  cursor: pointer;
+}
+[type="checkbox"]:not(:checked) + .form-check-sign:before, [type="checkbox"]:checked + .form-check-sign:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  background: transparent;
+  border-radius: 4px;
+}
+[type="checkbox"]:not(:checked) + .form-check-sign:after, [type="checkbox"]:checked + .form-check-sign:after {
+  content: "\f17b";
+  display: inline-block;
+  position: absolute;
+  top: -1px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 0.8;
+  color: #4D7CFE;
+  transition: all .2s;
+  font-family: LineAwesome;
+}
+[type="checkbox"]:not(:checked) + .form-check-sign:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + .form-check-sign {
+  font-weight: 700;
+}
+[type="checkbox"]:checked + .form-check-sign:after {
+  opacity: 1;
+  transform: scale(1);
+}
+[type="checkbox"]:disabled:not(:checked) + .form-check-sign:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + .form-check-sign:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
